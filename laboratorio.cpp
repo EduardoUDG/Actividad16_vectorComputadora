@@ -3,19 +3,12 @@
 
 Laboratorio::Laboratorio()
 {
-    cont = 0;
+
 }
 
 void Laboratorio::agregarPersonaje(const Computadora &p)
-{
-    if (cont < 5){
-        arreglo[cont] = p;
-        cont++;
-    }
-    else {
-        cout<<"Arrelgo lleno"<<endl;
-    }
-    
+{   
+    computadoras.push_back(p);
 }
 
 void Laboratorio::mostrar()
@@ -27,8 +20,8 @@ void Laboratorio::mostrar()
     cout << setw(15) << "RAM";
     cout << endl;
 
-    for (size_t i = 0; i < cont; i++){
-        Computadora &p = arreglo[i];
+    for (size_t i = 0; i < computadoras.size(); i++){
+        Computadora &p = computadoras[i];
         cout << p;
         // cout<<"Sistema Operativo: "<<p.getSo()<<endl;
         // cout<<"Nombre de Usuario: "<<p.getNomuser()<<endl;
@@ -50,8 +43,8 @@ void Laboratorio::respaldar_tabla(){
         archivo << setw(15) << "RAM";
         archivo << endl;
 
-        for (size_t i = 0; i < cont; i++){
-            Computadora &p = arreglo[i];
+        for (size_t i = 0; i < computadoras.size(); i++){
+            Computadora &p = computadoras[i];
             archivo << p;
         }
     }
@@ -61,8 +54,8 @@ void Laboratorio::respaldar_tabla(){
 void Laboratorio::respaldar(){
     ofstream archivo("computadoras.txt");
     if (archivo.is_open()) {
-        for (size_t i = 0; i < cont; i++){
-            Computadora &p = arreglo[i];
+        for (size_t i = 0; i < computadoras.size(); i++){
+            Computadora &p = computadoras[i];
             archivo << p.getSo()<< endl;
             archivo << p.getNomuser()<< endl;
             archivo << p.getAlmacenamiento()<< endl;
