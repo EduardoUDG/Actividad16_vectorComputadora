@@ -7,6 +7,7 @@
 class Laboratorio
 {
     vector<Computadora> computadoras;
+    
 public:
     Laboratorio();
     void agregarPersonaje(const Computadora &p);
@@ -14,6 +15,9 @@ public:
     void respaldar_tabla();
     void respaldar();
     void recuperar();
+
+    void insertar(const Computadora &c, size_t pos);
+    size_t size();
 
     friend Laboratorio& operator<<(Laboratorio &v, const Computadora &p)
     {
