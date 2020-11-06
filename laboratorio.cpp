@@ -93,3 +93,11 @@ void Laboratorio::recuperar(){
     }
     archivo.close();
 }
+
+void Laboratorio::insertar(const Computadora &c, size_t pos){
+    computadoras.insert(computadoras. begin()+pos, c);
+}
+
+size_t Laboratorio::size(){
+    return computadoras.size();
+}
