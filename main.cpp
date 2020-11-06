@@ -18,7 +18,8 @@ int main(){
         cout << "2) Mostrar" << endl;
         cout << "3) Respaldar" << endl;
         cout << "4) Recuperar" << endl;
-        cout << "5) Salir" << endl;
+        cout << "5) Insertar" << endl;
+        cout << "0) Salir" << endl;
         cout << "Opcion:" << endl;
         getline(cin, op);
 
@@ -46,9 +47,28 @@ int main(){
             l.recuperar();
         }
         else if (op == "5"){
+            Computadora c;
+
+            cin >> c;
+
+            size_t pos;
+            cout << "Posicion: " << endl;
+            cin >> pos;
+
+            if (pos >= l.size()){
+                cout << "Posicion no valida" << endl;
+            }
+            else {
+                l.insertar(c,pos);
+            }
+            
+        }
+        else if (op == "0")
+        {
             system("pause");
             break;
         }
+        
     }
     
 
