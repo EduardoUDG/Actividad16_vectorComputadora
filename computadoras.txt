@@ -1,0 +1,8 @@
+windows
+lalo
+1TB
+8
+MacOS
+diego
+1TB
+16
