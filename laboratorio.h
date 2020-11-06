@@ -7,7 +7,7 @@
 class Laboratorio
 {
     vector<Computadora> computadoras;
-    
+
 public:
     Laboratorio();
     void agregarPersonaje(const Computadora &p);
@@ -18,6 +18,7 @@ public:
 
     void insertar(const Computadora &c, size_t pos);
     size_t size();
+    void inicializar(const Computadora &c, size_t n);
 
     friend Laboratorio& operator<<(Laboratorio &v, const Computadora &p)
     {
