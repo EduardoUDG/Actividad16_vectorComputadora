@@ -2,11 +2,11 @@
 #define LABORATORIO_H
 
 #include "computadora.h"
+#include <vector>
 
 class Laboratorio
 {
-    Computadora arreglo[5];
-    size_t cont;
+    vector<Computadora> computadoras;
 public:
     Laboratorio();
     void agregarPersonaje(const Computadora &p);
