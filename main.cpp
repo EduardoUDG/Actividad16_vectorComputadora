@@ -20,6 +20,7 @@ int main(){
         cout << "4) Recuperar" << endl;
         cout << "5) Insertar" << endl;
         cout << "6) Inicializar" << endl;
+        cout << "7) Eliminar" << endl;
         cout << "0) Salir" << endl;
         cout << "Opcion:" << endl;
         getline(cin, op);
@@ -73,6 +74,19 @@ int main(){
 
             l.inicializar(c, n);
         }
+        else if (op == "7"){
+            size_t pos;
+            cout << "Posicion: " << endl;
+            cin >> pos; cin.ignore();
+
+            if (pos >= l.size()){
+                cout << "Posicion no valida" << endl;
+            }
+            else {
+                l.eliminar(pos);
+            }
+        }
+        
         
         else if (op == "0")
         {
