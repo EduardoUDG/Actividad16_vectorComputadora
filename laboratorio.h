@@ -19,6 +19,7 @@ public:
     void insertar(const Computadora &c, size_t pos);
     size_t size();
     void inicializar(const Computadora &c, size_t n);
+    void eliminar(size_t pos);
 
     friend Laboratorio& operator<<(Laboratorio &v, const Computadora &p)
     {
