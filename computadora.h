@@ -73,6 +73,13 @@ public:
         return nomuser == c.nomuser;
     }
 
+    bool operator<(const Computadora& c){ 
+        return nomuser < c.nomuser;
+    }
+
+    bool operator<(const Computadora& c) const{ 
+        return nomuser < c.nomuser;
+    }
 };
 
 #endif
