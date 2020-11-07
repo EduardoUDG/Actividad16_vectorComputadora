@@ -20,6 +20,7 @@ public:
     size_t size();
     void inicializar(const Computadora &c, size_t n);
     void eliminar(size_t pos);
+    void ordenar();
 
     friend Laboratorio& operator<<(Laboratorio &v, const Computadora &p)
     {
