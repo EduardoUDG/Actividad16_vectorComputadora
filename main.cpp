@@ -22,6 +22,7 @@ int main(){
         cout << "6) Inicializar" << endl;
         cout << "7) Eliminar" << endl;
         cout << "8) Ordenar" << endl;
+        cout << "9) Buscar" << endl;
         cout << "0) Salir" << endl;
         cout << "Opcion:" << endl;
         getline(cin, op);
@@ -90,8 +91,18 @@ int main(){
         else if (op == "8"){
             l.ordenar();
         }
-        
-        
+        else if (op == "9"){
+            Computadora c;
+            cin >> c;
+
+            Computadora *ptr = l.buscar(c);
+            if (ptr == nullptr){
+                cout << "No encontrado" << endl;
+            }
+            else {
+                cout << *ptr << endl;
+            }
+        }
         else if (op == "0")
         {
             system("pause");
