@@ -113,4 +113,17 @@ void Laboratorio::eliminar(size_t pos){
 
 void Laboratorio::ordenar(){
     sort(computadoras.begin(), computadoras.end());
-;}
+}
+
+Computadora* Laboratorio::buscar(const Computadora &c){
+    // vector<Computadora>::iterator
+    auto it = find(computadoras.begin(), computadoras.end(), c);
+
+    if (it == computadoras.end()){
+        return nullptr;
+    }
+    else {
+        return &(*it);
+    }
+    
+}
