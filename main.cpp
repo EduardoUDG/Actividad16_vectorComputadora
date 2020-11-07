@@ -93,15 +93,18 @@ int main(){
         }
         else if (op == "9"){
             Computadora c;
-            cin >> c;
+            cin >> c; cin.ignore();
 
             Computadora *ptr = l.buscar(c);
             if (ptr == nullptr){
                 cout << "No encontrado" << endl;
             }
             else {
+                cout << "Encontrado" << endl << endl;
                 cout << *ptr << endl;
             }
+            cout << endl;
+            system("pause");
         }
         else if (op == "0")
         {
